@@ -1,0 +1,1 @@
+nightfox.nvim/lua/nightfox/palette

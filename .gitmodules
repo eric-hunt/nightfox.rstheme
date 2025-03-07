@@ -1,0 +1,3 @@
+[submodule "nightfox.nvim"]
+	path = nightfox.nvim
+	url = https://github.com/EdenEast/nightfox.nvim
