@@ -1,0 +1,68 @@
+
+
+<p align="center">
+
+<img width="128" height="128" src="https://user-images.githubusercontent.com/2746374/179428323-6d6b5e7f-6459-47b3-9e03-fea7553d85af.svg" />
+</p>
+
+<h1 align="center">
+
+Nightfox (for RStudio)
+</h1>
+
+Special thanks to the creator(s) of this great *vim/neovim* theme
+([Nightfox](https://github.com/EdenEast/nightfox.nvim))! I hope many
+others will now enjoy this great theme in the RStudio IDE.
+
+*Nightfox* ![nightfox.rstheme_nightfox](./images/nightfox.png)
+
+*Dawnfox* ![nightfox.rstheme_dawnfox](./images/dawnfox.png)
+
+*Dayfox* ![nightfox.rstheme_dayfox](./images/dayfox.png)
+
+*Duskfox* ![nightfox.rstheme_duskfox](./images/duskfox.png)
+
+*Nordfox* ![nightfox.rstheme_nordfox](./images/nordfox.png)
+
+*Terafox* ![nightfox.rstheme_terafox](./images/terafox.png)
+
+------------------------------------------------------------------------
+
+This theme is implemented using the
+[`rsthemes`](https://github.com/gadenbuie/rsthemes) package, which
+provides:
+
+> :crystal_ball: Full RStudio IDE and Syntax Themes
+
+The package not only provides an extensive set of themes to beautify
+your RStudio experience, but also provides tools to create your own
+themes.
+
+I am indebted to the many contributors to this curated arsenal of
+harmonious colors that make staring at R code a much more pleasant
+experience. My goal is to submit this theme to be merged into the
+`rsthemes` package once I get most of the kinks worked out, but in the
+meantime, if you want to try it out you can install this R package from
+GitHub with:
+
+``` r
+if (!require(rsthemes)) remotes::install_github("gadenbuie/rsthemes")
+remotes::install_github("eric-hunt/nightfox.rstheme")
+# Recursively install all styles of the theme:
+purrr::walk(
+  c("nightfox", "dawnfox", "dayfox", "duskfox", "nordfox", "terafox"),
+  function(style) {
+    nightfox_rstheme(style = style, apply = TRUE)
+  }
+)
+# Or, alternatively, just install (and apply) what you want with:
+nightfox_rstheme(style = "dawnfox", apply = TRUE)
+```
+
+Or, you can just download the pre-built .rstheme file(s) and import
+within RStudio:
+
+``` mermaid
+flowchart LR
+  A["Tools/"]-->B["Global Options/"]-->C["Appearance/"]-->D("Add...")
+```
